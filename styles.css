@@ -471,6 +471,7 @@ h3 {
 }
 
 .phone-preview {
+  width: min(100%, 430px);
   max-width: 430px;
   margin: 0 auto;
   overflow: hidden;
@@ -574,7 +575,7 @@ h3 {
   width: 48px;
   height: 30px;
   border-radius: 8px;
-  background: #00ff00;
+  background: #f2bf4f;
 }
 
 .mock-save,
@@ -919,34 +920,55 @@ details p {
   }
 
   .phone-preview {
-    max-width: 100%;
-    border-width: 7px;
-    border-radius: 22px;
+    max-width: 280px;
+    border-width: 6px;
+    border-radius: 20px;
   }
 
   .phone-top {
-    padding: 13px 12px;
-    font-size: 14px;
+    padding: 11px 10px;
+    font-size: 13px;
   }
 
   .phone-screen {
-    gap: 10px;
-    padding: 12px;
+    gap: 8px;
+    padding: 10px;
   }
 
   .ui-block {
-    padding: 12px;
+    padding: 10px;
+  }
+
+  .ui-title,
+  .ui-color,
+  .ui-block.compact {
+    font-size: 11px;
+  }
+
+  .ui-range {
+    font-size: 11px;
   }
 
   .ui-title,
   .ui-block.compact {
     align-items: flex-start;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
   }
 
   .ui-title b {
     min-width: 0;
+  }
+
+  .phone-preview .ui-block.compact {
+    display: none;
+  }
+
+  .phone-preview .mock-save,
+  .phone-preview .mock-secondary {
+    min-height: 34px;
+    padding: 7px 8px;
+    font-size: 11px;
   }
 
   .interface-guide article {
@@ -969,6 +991,10 @@ details p {
 
   h1 {
     font-size: clamp(40px, 12vw, 48px);
+  }
+
+  .phone-preview {
+    max-width: 260px;
   }
 
   .lead,
