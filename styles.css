@@ -149,8 +149,10 @@ h2,
 h3,
 p {
   margin-top: 0;
-  overflow-wrap: break-word;
-  hyphens: auto;
+}
+
+.address {
+  overflow-wrap: anywhere;
 }
 
 h1 {
@@ -794,7 +796,6 @@ details p {
     padding: 7px 8px;
     background: rgba(47, 125, 90, 0.07);
     text-align: center;
-    overflow-wrap: anywhere;
   }
 
   .hero-inner,
@@ -834,7 +835,6 @@ details p {
   .section-heading p:not(.eyebrow) {
     font-size: 18px;
     line-height: 1.45;
-    overflow-wrap: anywhere;
   }
 
   .hero-steps {
@@ -844,17 +844,6 @@ details p {
   .hero-steps div {
     min-height: 0;
     padding: 12px;
-  }
-
-  .notice p,
-  .step p,
-  .settings-grid p,
-  .case-card p,
-  .capabilities-grid p,
-  .help-list p,
-  .finish p,
-  .save-note p {
-    overflow-wrap: anywhere;
   }
 
   .primary-action,
