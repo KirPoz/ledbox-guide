@@ -1,5 +1,5 @@
 :root {
-  --bg: #f5f4ee;
+  --bg: #f7f6f0;
   --ink: #151711;
   --muted: #5f665d;
   --paper: #ffffff;
@@ -10,7 +10,8 @@
   --amber: #f2bf4f;
   --coral: #ef876f;
   --blue: #dfeef3;
-  --shadow: 0 22px 60px rgba(18, 22, 18, 0.12);
+  --shadow: 0 18px 48px rgba(18, 22, 18, 0.1);
+  --soft-shadow: 0 10px 26px rgba(18, 22, 18, 0.07);
 }
 
 * {
@@ -42,9 +43,10 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 14px clamp(18px, 4vw, 56px);
-  background: rgba(245, 244, 238, 0.9);
+  padding: 12px clamp(18px, 4vw, 56px);
+  background: rgba(247, 246, 240, 0.94);
   border-bottom: 1px solid rgba(21, 23, 17, 0.08);
+  box-shadow: 0 8px 22px rgba(18, 22, 18, 0.04);
   backdrop-filter: blur(14px);
 }
 
@@ -79,6 +81,7 @@ a {
 .nav a {
   padding: 8px 12px;
   border-radius: 8px;
+  color: #3e483c;
   text-decoration: none;
 }
 
@@ -93,10 +96,10 @@ main {
 
 .hero {
   position: relative;
-  min-height: calc(100svh - 150px);
+  min-height: clamp(520px, 68svh, 680px);
   display: flex;
   align-items: center;
-  padding: clamp(54px, 8vw, 98px) clamp(18px, 5vw, 72px);
+  padding: clamp(46px, 6vw, 78px) clamp(18px, 5vw, 72px);
   color: #ffffff;
   background: #101310;
   isolation: isolate;
@@ -110,8 +113,8 @@ main {
   background-image: url("assets/ledbox-hero.svg");
   background-position: right 7% center;
   background-repeat: no-repeat;
-  background-size: min(760px, 58vw);
-  opacity: 0.9;
+  background-size: min(680px, 52vw);
+  opacity: 0.82;
 }
 
 .hero::after {
@@ -120,12 +123,12 @@ main {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(16, 19, 16, 0.94) 0%, rgba(16, 19, 16, 0.72) 48%, rgba(16, 19, 16, 0.18) 100%),
-    linear-gradient(180deg, rgba(16, 19, 16, 0.08) 0%, rgba(16, 19, 16, 0.52) 100%);
+    linear-gradient(90deg, rgba(16, 19, 16, 0.96) 0%, rgba(16, 19, 16, 0.78) 50%, rgba(16, 19, 16, 0.24) 100%),
+    linear-gradient(180deg, rgba(16, 19, 16, 0.04) 0%, rgba(16, 19, 16, 0.46) 100%);
 }
 
 .hero-inner {
-  width: min(720px, 100%);
+  width: min(820px, 100%);
 }
 
 .eyebrow {
@@ -152,15 +155,15 @@ p {
 
 h1 {
   margin-bottom: 18px;
-  font-size: clamp(50px, 9vw, 112px);
-  line-height: 0.92;
+  font-size: clamp(46px, 7vw, 88px);
+  line-height: 0.98;
   letter-spacing: 0;
 }
 
 h2 {
   margin-bottom: 14px;
-  font-size: clamp(32px, 5vw, 60px);
-  line-height: 1;
+  font-size: clamp(30px, 4.2vw, 52px);
+  line-height: 1.05;
   letter-spacing: 0;
 }
 
@@ -173,9 +176,50 @@ h3 {
 
 .lead {
   max-width: 650px;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   color: rgba(255, 255, 255, 0.82);
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(19px, 1.8vw, 24px);
+}
+
+.hero-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 780px;
+  margin-bottom: 24px;
+}
+
+.hero-steps div {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 78px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-steps span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--amber);
+  color: #17140b;
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.hero-steps p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.3;
 }
 
 .hero-actions,
@@ -191,7 +235,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 54px;
+  min-height: 52px;
   padding: 14px 22px;
   border-radius: 8px;
   font-size: 17px;
@@ -235,19 +279,19 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
-  margin-top: -34px;
-  margin-bottom: 54px;
+  margin-top: -30px;
+  margin-bottom: 50px;
   position: relative;
   z-index: 3;
 }
 
 .connect-card {
-  min-height: 118px;
+  min-height: 110px;
   padding: 20px;
   border: 1px solid rgba(222, 222, 210, 0.9);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.94);
-  box-shadow: var(--shadow);
+  box-shadow: var(--soft-shadow);
 }
 
 .connect-card span {
@@ -290,7 +334,7 @@ h3 {
 }
 
 .section {
-  padding: 76px 0;
+  padding: 70px 0;
 }
 
 .section-tint {
@@ -332,7 +376,7 @@ h3 {
   border: 1px solid rgba(21, 23, 17, 0.08);
   border-radius: 8px;
   background: var(--paper);
-  box-shadow: 0 14px 34px rgba(18, 22, 18, 0.07);
+  box-shadow: var(--soft-shadow);
 }
 
 .step-number {
@@ -370,20 +414,24 @@ h3 {
 }
 
 .capabilities-grid article {
-  background: #111410;
-  color: #ffffff;
+  background: var(--paper);
+  color: var(--ink);
 }
 
 .capabilities-grid article:nth-child(2) {
-  background: #193328;
+  background: #f3fbf6;
 }
 
 .capabilities-grid article:nth-child(3) {
-  background: #2a2a20;
+  background: #fff8e5;
 }
 
 .capabilities-grid article:nth-child(4) {
-  background: #23343a;
+  background: #eef8fb;
+}
+
+.capabilities-grid article:nth-child(5) {
+  background: #fff4ef;
 }
 
 .capability-icon {
@@ -401,7 +449,7 @@ h3 {
 }
 
 .capabilities-grid p {
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
 }
 
 .interface-section {
@@ -710,6 +758,11 @@ details p {
     background: linear-gradient(90deg, rgba(16, 19, 16, 0.94) 0%, rgba(16, 19, 16, 0.72) 100%);
   }
 
+  .hero-steps {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+  }
+
   .connect-panel,
   .steps,
   .settings-grid,
@@ -754,7 +807,7 @@ details p {
 
   .hero {
     min-height: auto;
-    padding: 46px 16px 74px;
+    padding: 42px 16px 72px;
   }
 
   .hero::before {
@@ -782,6 +835,15 @@ details p {
     font-size: 18px;
     line-height: 1.45;
     overflow-wrap: anywhere;
+  }
+
+  .hero-steps {
+    gap: 8px;
+  }
+
+  .hero-steps div {
+    min-height: 0;
+    padding: 12px;
   }
 
   .notice p,
