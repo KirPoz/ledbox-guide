@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeDBox - простая настройка светильника</title>
+  <meta name="description" content="Краткая инструкция по подключению и настройке светильника LeDBox.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#start" aria-label="LeDBox">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>LeDBox</span>
+    </a>
+    <nav class="nav" aria-label="Разделы инструкции">
+      <a href="#connect">Подключение</a>
+      <a href="#interface">Интерфейс</a>
+      <a href="#setup">Настройка</a>
+      <a href="#cases">Сценарии</a>
+      <a href="#help">Помощь</a>
+    </nav>
+  </header>
+
+  <main id="start">
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Инструкция для пользователя</p>
+        <h1>Инструкция LeDBox</h1>
+        <p class="lead">Короткий порядок действий: подключиться к Wi-Fi светильника, открыть панель управления, настроить свет и сохранить изменения.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#connect">Начать настройку</a>
+          <a class="secondary-action" href="README.md">Полная инструкция</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="connect-panel" aria-label="Данные для подключения">
+      <div class="connect-card">
+        <span>Wi-Fi сеть</span>
+        <strong>ledbox</strong>
+      </div>
+      <div class="connect-card">
+        <span>Пароль</span>
+        <strong>ledboxled</strong>
+      </div>
+      <div class="connect-card">
+        <span>Откройте в браузере</span>
+        <strong>http://ledbox.local</strong>
+      </div>
+      <div class="connect-card">
+        <span>Если не открылось</span>
+        <strong>http://192.168.4.1</strong>
+      </div>
+    </section>
+
+    <section class="notice">
+      <strong>Перед настройкой выключите VPN</strong>
+      <p>Если на телефоне включен VPN, страница светильника может не открыться. Отключите VPN на время настройки, затем подключитесь к Wi-Fi <b>ledbox</b> еще раз.</p>
+    </section>
+
+    <section id="connect" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Шаг 1</p>
+        <h2>Подключение к светильнику</h2>
+        <p>Интернет для настройки не нужен. Если телефон пишет "Без интернета", выберите "Остаться в сети". Если включен VPN, временно выключите его.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <span class="step-number">1</span>
+          <h3>Нажмите кнопку</h3>
+          <p>Нажмите кнопку на корпусе светильника. Зеленый индикатор означает, что Wi-Fi управления включен.</p>
+        </article>
+        <article class="step">
+          <span class="step-number">2</span>
+          <h3>Выберите сеть</h3>
+          <p>Откройте Wi-Fi на телефоне, выберите <b>ledbox</b> и введите пароль <b>ledboxled</b>.</p>
+        </article>
+        <article class="step">
+          <span class="step-number">3</span>
+          <h3>Введите адрес</h3>
+          <p>В браузере наберите <b>http://ledbox.local</b>. Если страница не открылась, используйте <b>http://192.168.4.1</b>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="interface" class="section interface-section">
+      <div class="section-heading">
+        <p class="eyebrow">Панель управления</p>
+        <h2>Что вы увидите на экране</h2>
+        <p>После открытия адреса появится страница "Панель управления LeDBox". Ниже показаны основные блоки из текущего интерфейса.</p>
+      </div>
+
+      <div class="interface-layout">
+        <div class="phone-preview" aria-label="Мини-макет панели управления LeDBox">
+          <div class="phone-top">Панель управления LeDBox</div>
+          <div class="phone-screen">
+            <div class="ui-block">
+              <div class="ui-title">
+                <span>Настройки радара</span>
+                <b>125 см</b>
+              </div>
+              <div class="fake-slider"><span style="width: 48%"></span></div>
+              <div class="ui-range"><span>15 см</span><span>250 см</span></div>
+            </div>
+            <div class="ui-block">
+              <div class="ui-title">
+                <span>Время свечения</span>
+                <b>60 с</b>
+              </div>
+              <div class="fake-slider"><span style="width: 22%"></span></div>
+            </div>
+            <div class="ui-block">
+              <div class="ui-title">
+                <span>Яркость</span>
+                <b>128</b>
+              </div>
+              <div class="fake-slider"><span style="width: 50%"></span></div>
+              <div class="ui-color"><span>Цвет</span><i></i></div>
+            </div>
+            <div class="ui-block compact">
+              <span>Рабочее расписание</span>
+              <b>23:00 - 07:00</b>
+            </div>
+            <button class="mock-save" type="button">Сохранить все настройки</button>
+            <button class="mock-secondary" type="button">Синхронизировать время</button>
+          </div>
+        </div>
+
+        <div class="interface-guide">
+          <article>
+            <span>1</span>
+            <div>
+              <h3>Сначала нажмите "Синхронизировать время"</h3>
+              <p>Так расписание будет работать по времени телефона.</p>
+            </div>
+          </article>
+          <article>
+            <span>2</span>
+            <div>
+          <h3>Настройте дистанцию</h3>
+              <p>Если светильник реагирует на стену или дверь, уменьшите значение. Если срабатывает поздно, увеличьте.</p>
+            </div>
+          </article>
+          <article>
+            <span>3</span>
+            <div>
+          <h3>Выберите яркость, цвет и время свечения</h3>
+              <p>Для ночи обычно удобны яркость 20-60, теплый желтый цвет и 60-120 секунд свечения.</p>
+            </div>
+          </article>
+          <article>
+            <span>4</span>
+            <div>
+              <h3>Сохраните настройки</h3>
+              <p>Нажмите "Сохранить все настройки" и дождитесь сообщения о сохранении.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="setup" class="section section-tint">
+      <div class="section-heading">
+        <p class="eyebrow">Шаг 2</p>
+        <h2>Настройка света</h2>
+        <p>Начните с готовых значений. Потом их можно легко изменить.</p>
+      </div>
+
+      <div class="settings-grid">
+        <article>
+          <h3>Время</h3>
+          <p>Нажмите <b>Синхронизировать время</b>, чтобы расписание работало правильно.</p>
+        </article>
+        <article>
+          <h3>Дистанция</h3>
+          <p>Подберите так, чтобы светильник не срабатывал от стены или двери, а включался, когда вы входите.</p>
+        </article>
+        <article>
+          <h3>Время свечения</h3>
+          <p>30-60 секунд для прохода, 90-120 секунд для спокойного ночного света.</p>
+        </article>
+        <article>
+          <h3>Яркость</h3>
+          <p>Для ночи попробуйте 20-60. Для прихожей или кладовки можно 80-160.</p>
+        </article>
+        <article>
+          <h3>Цвет</h3>
+          <p>Для ночи лучше теплый желтый оттенок. Синий и зеленый могут сильнее бодрить.</p>
+        </article>
+        <article>
+          <h3>Расписание</h3>
+          <p>Например, с 23:00 до 07:00. Если свет нужен всегда, расписание можно выключить.</p>
+        </article>
+      </div>
+
+      <div class="save-note">
+        <span>Важно</span>
+        <p>После изменений нажмите <b>Сохранить все настройки</b> и дождитесь сообщения о сохранении.</p>
+      </div>
+    </section>
+
+    <section class="section capabilities-section">
+      <div class="section-heading">
+        <p class="eyebrow">Полезно знать</p>
+        <h2>Что важно знать о светильнике</h2>
+        <p>Коротко о функциях, которые пригодятся при выборе места и режима работы.</p>
+      </div>
+
+      <div class="capabilities-grid">
+        <article>
+          <span class="capability-icon">01</span>
+          <h3>Загорается при приближении</h3>
+          <p>Датчик замечает человека рядом, и свет включается сам.</p>
+        </article>
+        <article>
+          <span class="capability-icon">02</span>
+          <h3>Работает от батареи</h3>
+          <p>После настройки лучше выключить Wi-Fi: так светильник дольше работает без подзарядки.</p>
+        </article>
+        <article>
+          <span class="capability-icon">03</span>
+          <h3>Держится на магните</h3>
+          <p>Светильник можно закрепить на подходящей металлической поверхности.</p>
+        </article>
+        <article>
+          <span class="capability-icon">04</span>
+          <h3>Заряжается через USB-C</h3>
+          <p>Для зарядки подходит обычный кабель USB Type-C.</p>
+        </article>
+        <article>
+          <span class="capability-icon">05</span>
+          <h3>Можно взять в поездку</h3>
+          <p>В отеле светильник помогает ночью не включать яркий верхний свет.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Готовые варианты</p>
+        <h2>Сценарии использования</h2>
+        <p>Выберите близкий сценарий и используйте значения как отправную точку.</p>
+      </div>
+
+      <div class="case-list">
+        <article class="case-card">
+          <h3>Ночью в туалет или ванную</h3>
+          <p>Яркость 20-50, теплый желтый цвет, свечение 60-120 секунд. Дистанцию подберите так, чтобы свет включался при входе, а не от стены или двери.</p>
+        </article>
+        <article class="case-card">
+          <h3>Отель или поездка</h3>
+          <p>Поставьте светильник рядом с кроватью или проходом. Он даст мягкий ночной свет без яркого верхнего освещения.</p>
+        </article>
+        <article class="case-card">
+          <h3>Лестница</h3>
+          <p>Дистанция 150-220 см, свечение 60-90 секунд, яркость 60-120, теплый белый или желтый цвет.</p>
+        </article>
+        <article class="case-card">
+          <h3>Кладовка или шкаф</h3>
+          <p>Дистанция 50-100 см, свечение 30-60 секунд, яркость 80-160, расписание выключено.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="help" class="section help-section">
+      <div class="section-heading">
+        <p class="eyebrow">Если не получилось</p>
+        <h2>Быстрая проверка</h2>
+        <p>Почти всегда достаточно проверить сеть и адрес.</p>
+      </div>
+
+      <div class="help-list">
+        <details>
+          <summary>Не вижу сеть ledbox</summary>
+          <p>Нажмите кнопку на корпусе, подождите 10 секунд и проверьте список Wi-Fi еще раз. Подойдите ближе к светильнику.</p>
+        </details>
+        <details>
+          <summary>Телефон пишет "Без интернета"</summary>
+          <p>Это нормально. Выберите "Остаться в сети" или похожий вариант. Интернет для настройки не нужен.</p>
+        </details>
+        <details>
+          <summary>Включен VPN</summary>
+          <p>Отключите VPN на время настройки. После этого заново подключитесь к Wi-Fi <b>ledbox</b> и откройте <b>http://ledbox.local</b>.</p>
+        </details>
+        <details>
+          <summary>Не открывается http://ledbox.local</summary>
+          <p>Введите в браузере запасной адрес: <b>http://192.168.4.1</b>.</p>
+        </details>
+        <details>
+          <summary>Свет включается слишком часто</summary>
+          <p>Уменьшите дистанцию обнаружения.</p>
+        </details>
+        <details>
+          <summary>Свет не включается</summary>
+          <p>Увеличьте дистанцию и проверьте расписание: возможно, сейчас светильник по расписанию должен быть выключен.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="finish">
+      <div>
+        <p class="eyebrow">Готово</p>
+        <h2>После сохранения выключите Wi-Fi</h2>
+        <p>Нажмите кнопку на корпусе еще раз. Настройки останутся в памяти, а светильник продолжит работать сам и дольше проработает от батареи.</p>
+      </div>
+      <a class="primary-action" href="#connect">Повторить шаги</a>
+    </section>
+  </main>
+</body>
+</html>
