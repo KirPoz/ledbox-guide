@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
 :root {
   --bg: #f7f6f0;
   --ink: #151711;
@@ -26,8 +28,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: Inter, Arial, Helvetica, sans-serif;
-  line-height: 1.55;
+  font-family: "Manrope", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
@@ -56,7 +59,7 @@ a {
   gap: 10px;
   color: var(--ink);
   font-size: 20px;
-  font-weight: 850;
+  font-weight: 800;
   text-decoration: none;
 }
 
@@ -75,7 +78,7 @@ a {
   min-width: 0;
   color: #394238;
   font-size: 15px;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .nav a {
@@ -137,7 +140,7 @@ main {
   margin: 0 0 12px;
   color: var(--green);
   font-size: 13px;
-  font-weight: 850;
+  font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -159,22 +162,22 @@ p {
 
 h1 {
   margin-bottom: 18px;
-  font-size: clamp(46px, 7vw, 88px);
-  line-height: 0.98;
+  font-size: clamp(42px, 6.4vw, 80px);
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
 h2 {
   margin-bottom: 14px;
-  font-size: clamp(30px, 4.2vw, 52px);
-  line-height: 1.05;
+  font-size: clamp(28px, 3.7vw, 46px);
+  line-height: 1.12;
   letter-spacing: 0;
 }
 
 h3 {
   margin-bottom: 10px;
-  font-size: 22px;
-  line-height: 1.2;
+  font-size: 21px;
+  line-height: 1.25;
   letter-spacing: 0;
 }
 
@@ -215,14 +218,14 @@ h3 {
   background: var(--amber);
   color: #17140b;
   font-size: 15px;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .hero-steps p {
   margin: 0;
   color: rgba(255, 255, 255, 0.88);
   font-size: 15px;
-  font-weight: 750;
+  font-weight: 700;
   line-height: 1.3;
 }
 
@@ -243,7 +246,7 @@ h3 {
   padding: 14px 22px;
   border-radius: 8px;
   font-size: 17px;
-  font-weight: 850;
+  font-weight: 800;
   text-decoration: none;
   transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
 }
@@ -394,7 +397,7 @@ h3 {
   background: var(--green);
   color: #ffffff;
   font-size: 18px;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .step p,
@@ -449,7 +452,7 @@ h3 {
   background: var(--amber);
   color: #17140b;
   font-size: 14px;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .capabilities-grid p {
@@ -482,7 +485,7 @@ h3 {
   color: #ffffff;
   background: #141414;
   text-align: center;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .phone-screen {
@@ -506,7 +509,7 @@ h3 {
   gap: 12px;
   color: #f3f3f3;
   font-size: 14px;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .ui-block.compact b {
@@ -580,7 +583,7 @@ h3 {
   border: 0;
   border-radius: 8px;
   color: #ffffff;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .mock-save {
@@ -616,7 +619,7 @@ h3 {
   border-radius: 50%;
   background: var(--green);
   color: #ffffff;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .interface-guide p {
@@ -653,7 +656,7 @@ h3 {
   border-radius: 8px;
   background: var(--amber);
   color: #17140b;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .save-note p {
@@ -706,7 +709,7 @@ summary {
   padding: 20px 22px;
   color: var(--ink);
   font-size: 18px;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 details p {
@@ -729,7 +732,9 @@ details p {
 }
 
 .finish h2 {
-  font-size: clamp(28px, 3vw, 42px);
+  margin-bottom: 10px;
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.2;
 }
 
 .finish .primary-action {
